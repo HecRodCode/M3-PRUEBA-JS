@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <!-- Global styles -->
+    <link rel="stylesheet" href="./css/global.css" />
+    <!-- Auth styles -->
+    <link rel="stylesheet" href="./css/login.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="auth-wrapper">
+      <div class="card auth-card">
+        <a class="logo-brand" href="#">
+          <h2 class="auth-title">CRUDZASO</h2>
+        </a>
+
+        <h3 class="auth-h3">Welcome back</h3>
+        <p class="auth-subtitle">
+          Enter your credentials to access the platform
+        </p>
+
+        <div class="auth-group">
+          <label for="identifier">Email or username</label>
+          <input
+            id="identifier"
+            type="text"
+            placeholder="student@university.edu"
+            class="auth-input"
+          />
+        </div>
+
+        <div class="auth-group">
+          <label for="password">Password</label>
+          <input
+            id="password"
+            type="password"
+            placeholder="......."
+            class="auth-input"
+          />
+        </div>
+
+        <div id="login-message" class="auth-message"></div>
+
+        <button id="login-btn" type="button" class="btn btn-primary w-100">
+          Login
+        </button>
+
+        <a>Forgot password?</a>
+
+        <p class="auth-footer">
+          Don’t have an account?
+          <a href="./register.html">Sign up</a>
+        </p>
+      </div>
+    </main>
+
+    <script type="module" src="./js/auth.js"></script>
+  </body>
+</html>
