@@ -1,0 +1,89 @@
+/* Define la variable global para el ancho de la sidebar si es necesario */
+:root {
+  --sidebar-width: 250px;
+}
+
+.dashboard-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar styles (from user request) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: var(--sidebar-width);
+  background: #ffffff;
+  transition: all 0.3s;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(77, 77, 77);
+  border-radius: 10px;
+}
+
+.logo i.name-brand {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  font-weight: bold;
+  color: #0f1724;
+}
+
+
+.sidebar .nav-link {
+  color: #6b7280;
+  padding: 12px 20px;
+  transition: all 0.3s;
+  border-left: 3px solid transparent;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+  color: #007bff;
+  background: #e9ecef;
+  border-left-color: #007bff;
+}
+
+.sidebar .nav-link i {
+  width: 25px;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  margin-left: var(--sidebar-width);
+  background-color: #f4f6f9;
+}
+
+
+.profile-pic-lg {
+  border: 3px solid #dee2e6;
+}
+
+.stat-number {
+  color: #333;
+}
+
+.stat-label {
+  font-size: 0.9em;
+}
+
+/* Otros estilos de la imagen original */
+.contact-text {
+  font-size: 0.9em;
+}

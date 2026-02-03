@@ -75,7 +75,7 @@
 .register-form {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem; /* IMPORTANTE: compacto */
+  gap: 0.75rem;
 }
 
 .register-group label {

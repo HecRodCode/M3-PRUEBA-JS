@@ -132,5 +132,3 @@ if (btnLogin) {
     }
   });
 }
-
-// Busca la parte donde validas si el usuario existe y cámbiala por esto:
