@@ -3,9 +3,6 @@ import * as Storage from './storage.js';
 import { clearRegisterForm } from './utils.js';
 import { redirectIfLoggedIn } from './guards.js';
 
-// === VERIFY LOGIN ===
-redirectIfLoggedIn();
-
 // === SIGN UP ===
 const formRegister = document.getElementById('register-form');
 
@@ -13,13 +10,13 @@ if (formRegister) {
   formRegister.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    try {
-      const nameInput = document.getElementById('name');
-      const emailInput = document.getElementById('email');
-      const password = document.getElementById('password');
-      const confirmPassword = document.getElementById('confirmPassword');
-      const message = document.getElementById('register-message');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const password = document.getElementById('password');
+    const confirmPassword = document.getElementById('confirmPassword');
+    const message = document.getElementById('register-message');
 
+    try {
       message.innerText = '';
 
       // VALIDATIONS
@@ -41,11 +38,11 @@ if (formRegister) {
       }
 
       const users = await Api.getUsers();
-      const userExists = users.some(
-        (u) =>
-          u.email.toLowerCase() === emailInput.value.toLowerCase() ||
-          u.phone === phoneInput.value
-      );
+      const userExists = users.some((u) => {
+        return (
+          u.email && u.email.toLowerCase() === emailInput.value.toLowerCase()
+        );
+      });
 
       if (userExists) {
         message.style.color = 'red';
@@ -60,18 +57,20 @@ if (formRegister) {
         password: password.value,
       });
 
-      clearRegisterForm();
+      if (typeof clearRegisterForm === 'function') {
+        clearRegisterForm();
+      } else {
+        formRegister.reset();
+      }
 
       message.style.color = 'green';
-      message.innerText = '✓ User registered successfully! You can now login.';
+      message.innerText = '✓ User registered successfully! Redirecting...';
 
       setTimeout(() => {
-        const loginTab = document.querySelector('[data-bs-target="#login"]');
-        if (loginTab) loginTab.click();
+        window.location.href = './index.html';
       }, 2000);
     } catch (error) {
-      console.error(error);
-      const message = document.getElementById('register-message');
+      console.error('Register error:', error);
       message.style.color = 'red';
       message.innerText = 'Server error, try again';
     }
@@ -134,3 +133,5 @@ if (btnLogin) {
     }
   });
 }
+
+// Busca la parte donde validas si el usuario existe y cámbiala por esto:
