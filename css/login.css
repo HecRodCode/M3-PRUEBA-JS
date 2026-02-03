@@ -1,0 +1,117 @@
+/* ================= LOGIN LAYOUT ================= */
+
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+  padding: 1rem;
+}
+
+/* ================= CARD ================= */
+
+.auth-card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 380px;
+  padding: 3rem;
+  text-align: center;
+  border-radius: 20px;
+}
+
+/* ================= BRAND ================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(77, 77, 77);
+
+  border-radius: 10px;
+}
+
+.logo i {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  font-weight: bold;
+  color: #0f1724;
+}
+
+.auth-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* ================= TEXT ================= */
+
+.auth-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+/* ================= FORM ================= */
+
+.auth-group {
+  margin-bottom: 0.8rem;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  font-size: 0.95rem;
+  background-color: white;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.15);
+}
+
+#login-btn {
+  width: 266px;
+  padding: 15px;
+}
+
+/* ================= MESSAGE ================= */
+
+.auth-message {
+  min-height: 18px;
+  font-size: 0.85rem;
+  color: var(--danger);
+  margin: 0.5rem 0 1rem;
+}
+
+/* ================= FOOTER ================= */
+
+.auth-footer {
+  margin-top: 1.2rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.auth-footer a {
+  color: var(--primary-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}

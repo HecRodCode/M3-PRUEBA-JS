@@ -1,0 +1,33 @@
+{
+  "users": [
+    {
+      "name": "Rod ADMIN",
+      "eamil": "ADMIN@admin.com",
+      "password": "123ADMIN"
+    },
+    {
+      "name": "Hector Hernan",
+      "email": "sebastvargas378@gmail.com",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "name": "Hector",
+      "email": "sebastvargas@gmail.com",
+      "password": "123",
+      "id": 2
+    }
+  ],
+  "tasks": [
+    {
+      "userId": 1,
+      "title": "vbgb",
+      "category": "Academic",
+      "priority": "High",
+      "status": "In Progress",
+      "dueDate": "5875-04-07",
+      "description": "85hytjt",
+      "id": 2
+    }
+  ]
+}
