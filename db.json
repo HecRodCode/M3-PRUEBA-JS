@@ -20,16 +20,6 @@
   ],
   "tasks": [
     {
-      "userId": 1,
-      "title": "tarea de mates ",
-      "category": "Academic",
-      "priority": "High",
-      "status": "In Progress",
-      "dueDate": "4114-02-24",
-      "description": "4jkjyukyu",
-      "id": 1
-    },
-    {
       "userId": 2,
       "title": "Holaaa",
       "category": "Academic",
@@ -48,6 +38,16 @@
       "dueDate": "0007-07-14",
       "description": "711752785",
       "id": 3
+    },
+    {
+      "userId": 1,
+      "title": "Prueba",
+      "category": "Academic",
+      "priority": "High",
+      "status": "In Progress",
+      "dueDate": "8522-02-15",
+      "description": "t54g5thyh",
+      "id": 4
     }
   ]
 }

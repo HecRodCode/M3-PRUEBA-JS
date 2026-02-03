@@ -1,7 +1,6 @@
 import * as Api from './api.js';
 import * as Storage from './storage.js';
 import { clearRegisterForm } from './utils.js';
-import { redirectIfLoggedIn } from './guards.js';
 
 // === SIGN UP ===
 const formRegister = document.getElementById('register-form');
