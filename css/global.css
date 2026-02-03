@@ -11,9 +11,6 @@
   --text-color: #1e293b;
   --text-muted: #64748b;
   --border-color: #e2e8f0;
-  --success: #10b981;
-  --warning: #f59e0b;
-  --danger: #ef4444;
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
@@ -52,11 +49,6 @@ body {
 .badge-warning {
   background-color: #fef3c7;
   color: #d97706;
-}
-
-.badge-danger {
-  background-color: #fee2e2;
-  color: var(--danger);
 }
 
 /* ===== BUTTONS ===== */

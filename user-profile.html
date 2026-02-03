@@ -1,11 +1,193 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUDZASO - My Profile</title>
+    <link
+      href="https://cdn.jsdelivr.net"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net" />
+
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/user-profile.css" />
+  </head>
+  <body>
+    <div class="dashboard-wrapper">
+      <!-- SIDEBAR -->
+      <aside class="sidebar" id="sidebar">
+        <div class="logo">
+          <img
+            src="./assets/images/logo.png"
+            class="mb-0"
+            alt="Logo CRUDZASO"
+          />
+          <i class="name-brand">CRUDZASO</i>
+        </div>
+        <nav class="nav flex-column mt-4">
+          <a class="nav-link" href="dashboard.html">
+            <i class="bi bi-speedometer2"></i> Dashboard
+          </a>
+          <a class="nav-link" href="tasks.html">
+            <i class="bi bi-list-task"></i> My Task
+          </a>
+          <a class="nav-link active" href="profile.html">
+            <i class="bi bi-person"></i> Profile
+          </a>
+        </nav>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+        <header class="header">
+          <h1 class="h3">My Profile</h1>
+        </header>
+
+        <div class="row g-4">
+          <!-- Left Card -->
+          <div class="col-lg-4">
+            <div class="card p-4">
+              <div class="text-center">
+                <img
+                  id="userProfilePicLg"
+                  src="https://via.placeholder.com"
+                  alt="User Profile"
+                  class="profile-pic-lg rounded-circle mb-3"
+                />
+                <h3 id="userName" class="h5 mb-1">Cargando...</h3>
+                <span id="userRoleBadge" class="badge bg-primary mb-4"
+                  >Usuario Estándar</span
+                >
+              </div>
+              <div class="contact-item d-flex align-items-center mb-3">
+                <i class="bi bi-envelope me-2 text-primary"></i>
+                <span id="userEmail" class="contact-text"
+                  >cargando@email.com</span
+                >
+              </div>
+              <div
+                class="profile-stats-section text-center p-3 bg-light rounded"
+              >
+                <div id="taskCount" class="stat-number h1 mb-0">0</div>
+                <div class="stat-label text-muted">Tasks</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Card -->
+          <div class="col-lg-8">
+            <div class="card p-4">
+              <div
+                class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-4"
+              >
+                <h2 class="h5 mb-0">Personal Information</h2>
+                <!-- OPEN MODAL-->
+                <button
+                  class="btn btn-outline-primary btn-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#editProfileModal"
+                  id="editProfileBtn"
+                >
+                  <i class="bi bi-pencil-square me-1"></i> Edit Profile
+                </button>
+              </div>
+
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label text-muted">Full Name</label>
+                  <p id="infoFullName" class="mb-0">Cargando...</p>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label text-muted">Employee ID</label>
+                  <p id="infoEmployeeId" class="mb-0">N/A</p>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label text-muted">Phone</label>
+                  <p id="infoPhone" class="mb-0">N/A</p>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label text-muted">Department</label>
+                  <p id="infoDepartment" class="mb-0">
+                    <span class="badge bg-warning text-dark">N/A</span>
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label text-muted">Role Level</label>
+                  <p id="infoRoleLevel" class="mb-0">N/A</p>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label text-muted">Join Date</label>
+                  <p id="infoJoinDate" class="mb-0">N/A</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div
+      class="modal fade"
+      id="editProfileModal"
+      tabindex="-1"
+      aria-labelledby="editProfileModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editProfileModalLabel">
+              Edit Personal Information
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <form id="profileEditForm">
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="editFullName" class="form-label">Full Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="editFullName"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="editPhone" class="form-label">Phone</label>
+                <input type="text" class="form-control" id="editPhone" />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="submit" class="btn btn-primary">
+                Save changes
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy90pSS+pHQfPSjXM+PZq1gvZm4d"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./js/profiles.js"></script>
+  </body>
 </html>

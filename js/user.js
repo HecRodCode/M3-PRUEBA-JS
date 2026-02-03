@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
+  // RENDER
   function renderTask(task) {
     const row = document.createElement('tr');
     row.setAttribute('data-id', task.id);
@@ -32,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <button class="btn btn-sm delete-btn"><i class="bi bi-trash"></i></button>
             </td>`;
 
+    // DELETE
     row.querySelector('.delete-btn').addEventListener('click', async () => {
       if (confirm('Are you sure you want to delete this task?')) {
         await deleteTask(task.id);
@@ -39,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    // UPDATE
     row.querySelector('.edit-btn').addEventListener('click', () => {
       document.getElementById('taskTitle').value = task.title;
       document.getElementById('taskCategory').value = task.category;
@@ -93,6 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // CREATE
   taskForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const editId = taskForm.getAttribute('data-edit-id');
@@ -130,6 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
   reloadAll();
 });
 
+// STATS
 function updateStats(tasks) {
   document.getElementById('totalEvents').textContent = tasks.length;
   document.getElementById('totalAttendees').textContent = tasks.filter(

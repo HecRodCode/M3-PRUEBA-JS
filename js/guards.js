@@ -1,4 +1,4 @@
-import { getSession, clearSession } from './storage.js';
+import { getSession } from './storage.js';
 
 // === ROUTE PROTECTION ===
 export function protectRoute(requiredRole) {

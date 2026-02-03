@@ -140,6 +140,7 @@ body {
   justify-content: space-between;
   margin-bottom: 10px;
 }
+
 /* DESINGS SEARCH */
 .search-task {
   display: flex;
@@ -186,16 +187,4 @@ body {
   padding: 5px 12px;
   border-radius: 20px;
   font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .sidebar {
-    margin-left: calc(-1 * var(--sidebar-width));
-  }
-  .sidebar.show {
-    margin-left: 0;
-  }
-  .main-content {
-    margin-left: 0;
-  }
 }
