@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     eventsTableBody.innerHTML = '';
 
     if (!tasksToRender || tasksToRender.length === 0) {
-      eventsTableBody.innerHTML = `<tr><td colspan="6" class="text-center">No se encontraron tareas</td></tr>`;
+      eventsTableBody.innerHTML = `<tr><td colspan="6" class="text-center">No tasks found</td></tr>`;
       return;
     }
 
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </td>`;
 
       row.querySelector('.delete-btn').addEventListener('click', async () => {
-        if (confirm(`¿ADMIN, eliminar: "${task.title}"?`)) {
+        if (confirm(`¿ADMIN, delete: "${task.title}"?`)) {
           await deleteTask(task.id);
           await reloadAll();
         }
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
       displayTasks(allTasks);
       updateStats(allTasks);
     } catch (error) {
-      console.error('Error en el renderizado:', error);
+      console.error('Rendering error:', error);
     }
   }
 

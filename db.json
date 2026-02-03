@@ -20,34 +20,14 @@
   ],
   "tasks": [
     {
-      "userId": 2,
-      "title": "Holaaa",
-      "category": "Academic",
-      "priority": "High",
-      "status": "Pending",
-      "dueDate": "21414-05-25",
-      "description": "441242452",
-      "id": 2
-    },
-    {
-      "userId": 2,
+      "userId": "Admin",
       "title": "1414141",
       "category": "Academic",
       "priority": "Low",
       "status": "In Progress",
-      "dueDate": "0007-07-14",
-      "description": "711752785",
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "title": "Prueba",
-      "category": "Academic",
-      "priority": "High",
-      "status": "In Progress",
-      "dueDate": "8522-02-15",
-      "description": "t54g5thyh",
-      "id": 4
+      "dueDate": "5585-05-08",
+      "description": "",
+      "id": 1
     }
   ]
 }

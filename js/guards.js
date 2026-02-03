@@ -6,7 +6,7 @@ export function protectRoute(requiredRole) {
 
   if (!session) {
     alert('You must be logged in to access this page');
-    window.location.href = './index.html'; // IF THERE IS NO SESSION, REDIRECT TO INDEX
+    window.location.href = '../../index.html'; // IF THERE IS NO SESSION, REDIRECT TO INDEX
     return false;
   }
 
@@ -25,24 +25,3 @@ export function protectRoute(requiredRole) {
   return true;
 }
 
-export function redirectIfLoggedIn() {
-  const session = getSession();
-
-  if (session) {
-    if (session.role === 'admin') {
-      window.location.href = './pages/admin/dashboard.html';
-    } else {
-      window.location.href = './pages/player/courts.html';
-    }
-    return true;
-  }
-
-  return false;
-}
-
-export function handleLogout() {
-  if (confirm('Are you sure you want to logout?')) {
-    clearSession();
-    window.location.href = '../../index.html';
-  }
-}
