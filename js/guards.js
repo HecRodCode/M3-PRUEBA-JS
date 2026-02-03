@@ -6,7 +6,7 @@ export function protectRoute(requiredRole) {
 
   if (!session) {
     alert('You must be logged in to access this page');
-    window.location.href = '../../index.html'; // IF THERE IS NO SESSION, REDIRECT TO INDEX
+    window.location.href = './index.html'; // IF THERE IS NO SESSION, REDIRECT TO INDEX
     return false;
   }
 

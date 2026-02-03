@@ -1,11 +1,53 @@
 {
   "users": [
-    { "name": "Rod ADMIN", "eamil": "ADMIN@admin.com", "password": "123ADMIN" },
+    {
+      "name": "Rod ADMIN",
+      "eamil": "ADMIN@admin.com",
+      "password": "123ADMIN"
+    },
     {
       "name": "Hector Hernan",
       "email": "sebastvargas378@gmail.com",
       "password": "123",
       "id": 1
+    },
+    {
+      "name": "Hector",
+      "email": "sebastvargas@gmail.com",
+      "password": "123",
+      "id": 2
+    }
+  ],
+  "tasks": [
+    {
+      "userId": 1,
+      "title": "tarea de mates ",
+      "category": "Academic",
+      "priority": "High",
+      "status": "In Progress",
+      "dueDate": "4114-02-24",
+      "description": "4jkjyukyu",
+      "id": 1
+    },
+    {
+      "userId": 2,
+      "title": "Holaaa",
+      "category": "Academic",
+      "priority": "High",
+      "status": "Pending",
+      "dueDate": "21414-05-25",
+      "description": "441242452",
+      "id": 2
+    },
+    {
+      "userId": 2,
+      "title": "1414141",
+      "category": "Academic",
+      "priority": "Low",
+      "status": "In Progress",
+      "dueDate": "0007-07-14",
+      "description": "711752785",
+      "id": 3
     }
   ]
 }
